@@ -16,8 +16,15 @@ var Lab4 = ( function() {
              * places.  (See the screenshot given with this assignment.)
              */
 
-            // INSERT YOUR CODE HERE
-
+  var input = document.getElementById("input").value;
+					 let input_1 = parseInt(input);
+            var rate = rates["rates"];
+            var s = "";
+					for (var r in rate){
+                s += "<p>" + r + ": " + (rate[r] * input_1) + "</p>";               
+            }
+            
+            $('#output').html(s);
         },
         
         getConversion: function() {
